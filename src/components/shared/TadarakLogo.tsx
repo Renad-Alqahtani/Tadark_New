@@ -8,14 +8,14 @@ interface TadarakLogoProps {
 export const TadarakLogo = ({ size = 'md', showText = true }: TadarakLogoProps) => {
   const sizes = {
     sm: 'h-8',
-    md: 'h-12',
+    md: 'h-32',
     lg: 'h-20'
   };
 
   return (
     <div className="flex flex-col items-center gap-2">
       <img 
-        src="/13.png" 
+        src="/11.png" 
         alt="Tadarak Logo" 
         className={`${sizes[size]} w-auto object-contain`} 
       />
