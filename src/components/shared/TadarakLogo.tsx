@@ -1,33 +1,27 @@
+import React from 'react';
+
 interface TadarakLogoProps {
   size?: 'sm' | 'md' | 'lg';
+  showText?: boolean;
 }
 
-export const TadarakLogo = ({ size = 'lg' }: TadarakLogoProps) => {
+export const TadarakLogo = ({ size = 'md', showText = true }: TadarakLogoProps) => {
   const sizes = {
-    sm: 40,
-    md: 60,
-    lg: 180,
+    sm: 'h-8',
+    md: 'h-12',
+    lg: 'h-20'
   };
-
-  const iconSize = sizes[size];
 
   return (
     <div className="flex flex-col items-center gap-2">
-      <img
-<<<<<<< HEAD
-        src="/11.jpeg"
-=======
-        src="public/11.png"
->>>>>>> 4a1f908 (تعديلات)
-        alt="Tadarak Logo"
-        style={{ width: iconSize * 1.5, height: iconSize }}
-        className="object-contain"
+      <img 
+        src="/12.png" 
+        alt="Tadarak Logo" 
+        className={`${sizes[size]} w-auto object-contain`} 
       />
-<<<<<<< HEAD
-=======
-
-    
->>>>>>> 4a1f908 (تعديلات)
+      {showText && (
+        <span className="font-bold text-primary tracking-tight">Tadarak</span>
+      )}
     </div>
   );
 };
