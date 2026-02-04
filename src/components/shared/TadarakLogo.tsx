@@ -5,11 +5,11 @@ interface TadarakLogoProps {
   showText?: boolean;
 }
 
-export const TadarakLogo = ({ size = 'md', showText = true }: TadarakLogoProps) => {
+export const TadarakLogo = ({ size = 'lg', showText = true }: TadarakLogoProps) => {
   const sizes = {
-    sm: 'h-8',
-    md: 'h-32',
-    lg: 'h-20'
+    sm: 40,
+    md: 60,
+    lg: 180
   };
 
   return (
@@ -19,9 +19,7 @@ export const TadarakLogo = ({ size = 'md', showText = true }: TadarakLogoProps) 
         alt="Tadarak Logo" 
         className={`${sizes[size]} w-auto object-contain`} 
       />
-      {showText && (
-        <span className="font-bold text-primary tracking-tight">Tadarak</span>
-      )}
+      
     </div>
   );
 };
